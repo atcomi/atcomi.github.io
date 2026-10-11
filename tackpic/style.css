@@ -70,9 +70,11 @@ main { max-width: 32rem; }
 
 /* Rounder than the shared sheet's 12.
  *
- * The app's radius scale is 4, 8, 12, 16, 20, 24, and 20 is what it gives a
- * card of this size -- the place panel's clock and weather cards. So the box
- * matches the app the same way the two colours do, rather than landing on a
- * number chosen by eye.
+ * The app's radius scale is 4, 8, 12, 16, 20, 24, and this takes the top of
+ * it. 20 is the place panel's card and was the first step up from 12; 24 is
+ * the one past it and still the app's own number, so the box matches the app
+ * the same way the two colours do rather than landing on something chosen by
+ * eye. 32 was looked at beside it and is outside the scale -- on a box 512px
+ * wide only the corners read, and nothing in the app is shaped that way.
  */
-.lede { border-radius: 20px; }
+.lede { border-radius: 24px; }
