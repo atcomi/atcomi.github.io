@@ -67,3 +67,12 @@ body { font-size: 16px; line-height: 1.7; }
  * than the width looking generous.
  */
 main { max-width: 32rem; }
+
+/* Rounder than the shared sheet's 12.
+ *
+ * The app's radius scale is 4, 8, 12, 16, 20, 24, and 20 is what it gives a
+ * card of this size -- the place panel's clock and weather cards. So the box
+ * matches the app the same way the two colours do, rather than landing on a
+ * number chosen by eye.
+ */
+.lede { border-radius: 20px; }
