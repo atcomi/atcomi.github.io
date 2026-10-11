@@ -13,7 +13,21 @@
  */
 :root {
   --bg: #2e2e2e;
-  --fg: #ececee;
+  /* **A step down from `#ececee`, which the shared sheet mixed for a near-black
+   * `#131316`.** On `#2e2e2e` the paper is already lighter, so the same white
+   * text sat at 11.5:1 and read as glare rather than as text -- the body is
+   * 300 weight here, and a light face at full brightness buzzes.
+   *
+   * 9.4:1, against WCAG's 4.5 for body text, so this is a long way clear of
+   * the floor in the direction of comfort rather than near it. It also keeps
+   * the gap to `--muted` (5.8:1) wide, which is what makes `.sub` and the
+   * footer read as quieter rather than as the same grey.
+   *
+   * It is the body, the headings and `strong` together -- all three take
+   * `--fg` -- which is the point: the page gets quieter as a whole rather
+   * than the headings pulling away from the text under them.
+   */
+  --fg: #d6d6da;
   /* Lighter than the shared sheet's dark `--muted`, which was mixed against a
    * near-black `#131316`; on `#2e2e2e` it reads as low contrast. */
   --muted: #a9a9ae;
