@@ -1,0 +1,25 @@
+/* Tackpic's own colours, over the shared sheet.
+ *
+ * Linked after `../style.css` so these win in both schemes: a later `:root`
+ * beats an earlier one at the same specificity, inside a media query or not.
+ *
+ * Scoped to a file of its own because `../style.css` is Calomi's and the
+ * atcomi home page's as well, and those stay as they are.
+ *
+ * `#2e2e2e` is the app's own dark -- the map's corner pill, the traveller's
+ * outline -- so the pages a reader reaches from the App Store look like the
+ * app they are about. One palette in both light and dark, because the colour
+ * is the point rather than the scheme.
+ */
+:root {
+  --bg: #2e2e2e;
+  --fg: #ececee;
+  /* Lighter than the shared sheet's dark `--muted`, which was mixed against a
+   * near-black `#131316`; on `#2e2e2e` it reads as low contrast. */
+  --muted: #a9a9ae;
+  --rule: #454548;
+  --accent: #34d06f;
+  /* A shade under the page, so `.lede` and `code` read as inset rather than
+   * raised -- the shared sheet's `--card` is the same idea at its own depth. */
+  --card: #262628;
+}
