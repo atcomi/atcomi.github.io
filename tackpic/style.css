@@ -57,7 +57,13 @@ strong { font-weight: 500; }
  * is the root size rather than the body's, so shrinking the text only fits
  * more of it on the same width: 92 characters a line at 17px, 98 at 16, where
  * 45-75 is the range that reads easily. 1.7 gives the eye more to return to.
- * Narrowing `main` is the lever that would actually shorten them -- `32rem`
- * lands at about 71 -- and it is deliberately not pulled here.
  */
 body { font-size: 16px; line-height: 1.7; }
+
+/* **The column, which is what actually shortens a line.** `44rem` held 98
+ * characters at this size; `32rem` holds about 71, inside the 45-75 that
+ * reads without the eye losing its place coming back to the left. These are
+ * pages somebody opens because something is wrong, so that matters more here
+ * than the width looking generous.
+ */
+main { max-width: 32rem; }
