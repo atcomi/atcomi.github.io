@@ -18,7 +18,9 @@
    * near-black `#131316`; on `#2e2e2e` it reads as low contrast. */
   --muted: #a9a9ae;
   --rule: #454548;
-  --accent: #34d06f;
+  /* The app's own amber -- `Tokens.Yellow.base`, the welcome ring and the
+   * `Sample` pill -- rather than the shared sheet's green, which is Calomi's. */
+  --accent: #ffc800;
   /* A shade under the page, so `.lede` and `code` read as inset rather than
    * raised -- the shared sheet's `--card` is the same idea at its own depth. */
   --card: #262628;
