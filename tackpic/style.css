@@ -50,3 +50,14 @@ body { font-weight: 300; }
 /* Held apart from the body's 300 rather than the old 400, or `strong` would
  * stop reading as emphasis. */
 strong { font-weight: 500; }
+
+/* 16px rather than the shared sheet's 17, with a little more leading under it.
+ *
+ * **It does not make the lines shorter.** The column is `44rem`, and a `rem`
+ * is the root size rather than the body's, so shrinking the text only fits
+ * more of it on the same width: 92 characters a line at 17px, 98 at 16, where
+ * 45-75 is the range that reads easily. 1.7 gives the eye more to return to.
+ * Narrowing `main` is the lever that would actually shorten them -- `32rem`
+ * lands at about 71 -- and it is deliberately not pulled here.
+ */
+body { font-size: 16px; line-height: 1.7; }
