@@ -25,3 +25,28 @@
    * raised -- the shared sheet's `--card` is the same idea at its own depth. */
   --card: #262628;
 }
+
+/* **Lighter on dark.** Light text on a dark ground reads optically heavier
+ * than the same weight the other way round, so 400 here sits a shade bolder
+ * than it looks on the shared sheet's white. 300 puts it back.
+ *
+ * `-apple-system` resolves to SF, which has a real Light here: 300 and 400 are
+ * measurably different faces, 338.8pt of text against 336.0.
+ *
+ * **300 is as light as this goes, and asking for less is a lie in the file.**
+ * Drawn to a canvas and compared pixel by pixel, 100 and 200 come out
+ * identical to 300 and 400 differs by 2,511 pixels -- at body size the system
+ * font offers one light face and one regular, so `font-weight: 100` would
+ * render exactly as this line does while telling the next reader otherwise.
+ * Anything genuinely thinner means a web font, which costs a download and a
+ * flash of unstyled text on pages a reviewer and a stuck user open.
+ *
+ * Where it falls back -- Segoe UI, Helvetica Neue -- 300 may land on the
+ * family's own Light or be rounded to 400 rather than synthesised, so nothing
+ * ends up thinner than the face actually has.
+ */
+body { font-weight: 300; }
+
+/* Held apart from the body's 300 rather than the old 400, or `strong` would
+ * stop reading as emphasis. */
+strong { font-weight: 500; }
